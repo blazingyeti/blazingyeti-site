@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,
+body {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
+
+  @apply min-h-screen bg-zinc-300 text-gray-900 dark:bg-zinc-800 dark:text-gray-300;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.nav-link {
+  @apply text-base font-normal text-gray-600 underline underline-offset-4 hover:font-bold dark:text-gray-300 md:text-2xl;
+}
+
+.project-card {
+  @apply h-96 rounded-lg border border-zinc-600 bg-zinc-400
+  shadow-2xl transition duration-200 ease-out hover:scale-105
+   hover:cursor-pointer hover:shadow-2xl dark:bg-zinc-700;
+}
+
+.project-modal {
+  @apply flex flex-col rounded-xl bg-zinc-300 p-12 text-black 
+  shadow-2xl dark:border dark:border-zinc-500 dark:bg-zinc-600 dark:text-zinc-200 md:p-20;
+}
+
+.page-heading {
+  @apply flex justify-center p-2 text-2xl font-bold md:text-3xl;
+}
