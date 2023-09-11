@@ -1,12 +1,6 @@
 [build]
   command = "npm run build"
   publish = "build"
-[[redirects]]
-  from = "/stats/api/event"
-  to = "https://plausible.io/api/event"
-  status = 200
-  force = true
-  headers = {X-From = "Netlify"}
 [[headers]]
   for = "/*"
   [headers.values]
