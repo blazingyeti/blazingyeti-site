@@ -1,6 +1,8 @@
 <script lang="ts">
   import Seo from "$lib/components/Seo.svelte";
   import config from "$lib/content/data";
+  import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+  import { FontAwesomeIcon } from "@fortawesome/svelte-fontawesome";
 
   const description = config.about.description;
 </script>
@@ -23,15 +25,15 @@
         <div class="flex items-center gap-1">
           Currently working on
           <a
-            class="flew-row duration-2000 flex transform rounded-md bg-red-500
-              mx-1 p-1 text-white transition ease-out hover:scale-105"
+            class="flew-row duration-2000 mx-1 flex transform rounded-md
+              bg-red-500 p-1 text-white transition ease-out hover:scale-105"
             href={config.about.currentProjectUrl}
             target="_blank"
             rel="noreferrer"
           >
             {config.about.currentProject}
             <div class="flex items-center px-1">
-              <!-- <FaExternalLinkAlt /> -->
+              <FontAwesomeIcon icon={faExternalLinkAlt} />
             </div>
           </a>
         </div>

@@ -4,7 +4,11 @@
   import config from "$lib/content/data";
   import "$lib/css/app.css";
   import { initPlausible } from "$lib/utils/stats";
+  import { config as FaConfig } from "@fortawesome/fontawesome-svg-core";
   import { onMount } from "svelte";
+
+  import "@fortawesome/fontawesome-svg-core/styles.css";
+  FaConfig.autoAddCss = false;
 
   const keywords = config.keywords;
 

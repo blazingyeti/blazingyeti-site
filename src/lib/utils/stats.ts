@@ -1,6 +1,6 @@
 import Plausible  from "plausible-tracker";
 import type { EventOptions, PlausibleOptions } from "plausible-tracker";
-import config from "../content/data"
+import config from "$lib/content/data"
 
 let plausible: ReturnType<typeof Plausible>;
 
