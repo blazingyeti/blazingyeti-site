@@ -29,7 +29,8 @@ a {
 }
 
 .nav-link {
-  @apply text-base font-normal text-gray-600 underline underline-offset-4 hover:font-bold dark:text-gray-300 md:text-2xl;
+  @apply text-base font-normal text-gray-600 underline underline-offset-4
+  hover:font-bold dark:text-gray-300 md:text-2xl;
 }
 
 .project-card {
