@@ -3,8 +3,12 @@
   import { faClose } from "@fortawesome/free-solid-svg-icons";
   import { FontAwesomeIcon } from "@fortawesome/svelte-fontawesome";
   import { createEventDispatcher } from "svelte";
-  export let project: App.Project;
-  export let showModal: boolean;
+  interface Props {
+    project: App.Project;
+    showModal: boolean;
+  }
+
+  let { project, showModal }: Props = $props();
 
   const dispatch = createEventDispatcher();
 </script>
@@ -12,7 +16,7 @@
 <div class="modal" class:modal-open={showModal}>
   <div class="modal-box project-modal">
     <div class="flex justify-end">
-      <button class="" on:click={() => dispatch("close")}> <FontAwesomeIcon class="text-4xl hover:scale-110" icon={faClose} /> </button>
+      <button class="" onclick={() => dispatch("close")}> <FontAwesomeIcon class="text-4xl hover:scale-110" icon={faClose} /> </button>
     </div>
     <div class="flex justify-center pb-8 text-2xl">
       {project.title}

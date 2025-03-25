@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Footer from "$lib/components/Footer.svelte";
   import Navbar from "$lib/components/Navbar.svelte";
   import config from "$lib/content/data";
@@ -8,6 +8,11 @@
   import { onMount } from "svelte";
 
   import "@fortawesome/fontawesome-svg-core/styles.css";
+  interface Props {
+    children?: import('svelte').Snippet;
+  }
+
+  let { children }: Props = $props();
   FaConfig.autoAddCss = false;
 
   const keywords = config.keywords;
@@ -25,7 +30,7 @@
 <div class="container mx-auto">
   <Navbar />
   <main class="main">
-    <slot />
+    {@render children?.()}
   </main>
   <Footer />
 </div>

@@ -1,11 +1,21 @@
 <script lang="ts">
   import config from "$lib/content/data";
 
-  export let title: string = config.name,
-    description: string = config.description,
-    siteUrl: string = config.siteUrl,
-    image: string = config.avatarUrl,
-    pathname: string = "";
+  interface Props {
+    title?: string;
+    description?: string;
+    siteUrl?: string;
+    image?: string;
+    pathname?: string;
+  }
+
+  let {
+    title = config.name,
+    description = config.description,
+    siteUrl = config.siteUrl,
+    image = config.avatarUrl,
+    pathname = ""
+  }: Props = $props();
 </script>
 
 <svelte:head>

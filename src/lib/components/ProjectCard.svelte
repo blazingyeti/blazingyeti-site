@@ -1,5 +1,9 @@
 <script lang="ts">
-  export let project: App.Project;
+  interface Props {
+    project: App.Project;
+  }
+
+  let { project }: Props = $props();
 </script>
 
 <div class="card card-normal project-card bg-base-100">

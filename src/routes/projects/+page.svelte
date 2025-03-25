@@ -4,15 +4,15 @@
   import Seo from "$lib/components/Seo.svelte";
   import config from "$lib/content/data";
 
-  let showModal = false;
-  let modalProject: App.Project = {
+  let showModal = $state(false);
+  let modalProject: App.Project = $state({
     title: "",
     repoName: "",
     link: "",
     demo: "",
     imgUrl: "",
     tags: [""],
-  };
+  });
 
   const handleToggleModal = (project: App.Project) => {
     showModal = !showModal;
@@ -27,7 +27,7 @@
 
   <div class="mx-auto grid min-w-full grid-cols-1 gap-6 p-6 sm:grid-cols-2 lg:grid-cols-3">
     {#each config.projects as project}
-      <button on:click={() => handleToggleModal(project)}>
+      <button onclick={() => handleToggleModal(project)}>
         <ProjectCard {project} />
       </button>
     {/each}

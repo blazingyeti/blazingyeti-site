@@ -20,7 +20,7 @@
   };
 </script>
 
-<button class="" on:click={handleClick}>
+<button class="" onclick={handleClick}>
   {#if $theme == "dark"}
     <Sun />
   {:else}
